@@ -58,4 +58,12 @@ class Pet
     found_pets = pets.map { |pet| Pet.new(pet) }
     return found_pets
   end
+
+  def self.find(id)
+    sql = "SELECT * FROM pets
+    WHERE id = $1"
+    pet = SqlRunner.run(sql, [id]).first
+    return pet
+  end
+  
 end
