@@ -1,4 +1,4 @@
-require_reltive('../db/sql_runner.rb')
+require_relative('../db/sql_runner.rb')
 
 class Owner
 
@@ -57,4 +57,5 @@ class Owner
     found_owner = SqlRunner.run(sql, [@id])[0]
     return found_owner
   end
+
 end
