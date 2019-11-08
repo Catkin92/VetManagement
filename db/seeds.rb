@@ -31,6 +31,40 @@ vet2 = Vet.new(
 vet1.save
 vet2.save
 
+pet1 = Pet.new(
+  'name' => 'Patch',
+  'dob' => '12/10/19',
+  'type' => 'dalmatian',
+  'notes' => 'Patch is presenting with mild alopecia.',
+  'vet_id' => vet2.id,
+  'owner_id' => owner1.id)
+pet2 = Pet.new(
+  'name' => 'Rolly',
+  'dob' => '12/10/19',
+  'type' => 'dalmatian',
+  'notes' => 'Rolly is overweight for a puppy of his age.',
+  'vet_id' => vet2.id,
+  'owner_id' => owner1.id)
+pet3 = Pet.new(
+  'name' => 'Dinah',
+  'dob' => '23/7/17',
+  'type' => 'cat',
+  'notes' => 'Dinah has sprained her front right leg.',
+  'vet_id' => vet1.id,
+  'owner_id' => owner2.id)
+pet4 = Pet.new(
+  'name' => 'Roscoe',
+  'dob' => '4/2/15',
+  'type' => 'doberman',
+  'notes' => 'Roscoe has rabies.',
+  'vet_id' => vet1.id,
+  'owner_id' => owner3.id)
+
+pet1.save
+pet2.save
+pet3.save
+pet4.save
+
 binding.pry
 
 nil
