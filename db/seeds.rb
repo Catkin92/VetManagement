@@ -1,6 +1,8 @@
 require('pry')
 require_relative('../models/owner.rb')
 require_relative('../models/vet.rb')
+require_relative('../models/pet.rb')
+
 
 owner1 = Owner.new(
   'name' => 'Cruella De Vil',
