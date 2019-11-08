@@ -10,16 +10,17 @@
   <input type="text" name="type">
 
   <label for="owner-selection">Owner:</label>
-  <select name="vet_id">
-    <option value="<%= owner1.id %>">Cruella De Vil</option>
-    <option value="<%= owner2.id %>">Alice Liddell</option>
-    <option value="<%= owner3.id %>">Bill Sykes</option>
+  <select name="owner_id">
+    <% for owner in @owners %>
+    <option value="<%= owner.id %>"<%= owner.name %></option>
+    <% end %>
   </select>
 
-  <label for="vet-selection">Date of Birth:</label>
+  <label for="vet-selection">Owner:</label>
   <select name="vet_id">
-    <option value="<%= vet1.id %>">Dr. John Dolittle</option>
-    <option value="<%= vet2.id %>">Dr. Morwenna Hamster</option>
+    <% for vet in @vets %>
+    <option value="<%= vet.id %>"<%= vet.name %></option>
+    <% end %>
   </select>
 
   <label for="notes-field">Notes:</label>
