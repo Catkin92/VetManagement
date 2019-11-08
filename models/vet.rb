@@ -22,8 +22,8 @@ class Vet
   end
 
   def update
-    sql = "UPDATE vets SET(
-    name) = ($1)
+    sql = "UPDATE vets SET
+    name = $1
     WHERE id = $2"
     values = [@name, @id]
     SqlRunner.run(sql, values)
@@ -31,7 +31,7 @@ class Vet
 
   def delete
     sql = "DELETE FROM vets WHERE id = $1"
-    SqlRunner(sql, [@id])
+    SqlRunner.run(sql, [@id])
   end
 
   def self.all
@@ -44,7 +44,8 @@ class Vet
   def self.find(id)
     sql = "SELECT * FROM vets
     WHERE id = $1"
-    vet = SqlRunner(sql, [id]).first
+    vet = SqlRunner.run(sql, [id]).first
     return vet
   end
+
 end

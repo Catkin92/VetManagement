@@ -1,5 +1,6 @@
 require('pry')
 require_relative('../models/owner.rb')
+require_relative('../models/vet.rb')
 
 owner1 = Owner.new(
   'name' => 'Cruella De Vil',
@@ -17,6 +18,16 @@ owner3 = Owner.new(
 owner1.save
 owner2.save
 owner3.save
+
+vet1 = Vet.new(
+  'name' => 'Dr. John Dolittle'
+)
+vet2 = Vet.new(
+  'name' => 'Dr. Morwenna Hamster'
+)
+
+vet1.save
+vet2.save
 
 binding.pry
 
