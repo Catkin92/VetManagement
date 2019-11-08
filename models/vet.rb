@@ -40,4 +40,11 @@ class Vet
     found_vets = vets.map { |vet| Vet.new(vet) }
     return found_vets
   end
+
+  def self.find(id)
+    sql = "SELECT * FROM vets
+    WHERE id = $1"
+    vet = SqlRunner(sql, [id]).first
+    return vet
+  end
 end
