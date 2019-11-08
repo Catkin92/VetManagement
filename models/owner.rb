@@ -21,8 +21,8 @@ class Owner
       $1, $2, $3
     ) RETURNING *"
     values = [@name, @address, @phone_number]
-    save = SqlRunner.run(sql, values)
-    @id = save[0]['id'].to_i
+    save = SqlRunner.run(sql, values).first
+    @id = save['id']
   end
 
   def update
@@ -51,11 +51,11 @@ class Owner
     return found_owners
   end
 
-  def self.id(id)
+  def self.find(id)
     sql = "SELECT * FROM owners
     WHERE id = $1"
-    found_owner = SqlRunner.run(sql, [@id])[0]
-    return found_owner
+    found_owner = SqlRunner.run(sql, [id]).first
+    return Owner.new(found_owner)
   end
 
 end

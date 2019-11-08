@@ -13,3 +13,11 @@ owner3 = Owner.new(
   'name' => 'Bill Sykes',
   'address' => '12 Dickens Drive, Alderburgh, Suffolk, IP15 5DF ',
   'phone_number' => '01728 324 773')
+
+owner1.save
+owner2.save
+owner3.save
+
+binding.pry
+
+nil
