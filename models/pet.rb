@@ -30,4 +30,19 @@ class Pet
     save = SqlRunner.run(sql, values).first
     @id = save['id']
   end
+
+  def update
+    sql = "UPDATE pets SET(
+    name,
+    dob,
+    type,
+    notes,
+    vet_id,
+    owner_id
+    ) = (
+    $1, $2, $3, $4, $5, $6
+    ) WHERE id = $7"
+    values = [@name, @dob, @type, @notes, @vet_id, @owner_id, @id]
+    SqlRunner.run(sql, values)
+  end
 end
