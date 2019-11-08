@@ -30,6 +30,11 @@ class Owner
     name,
     address,
     phone_number
-    )"
+    ) = (
+    $1, $2, $3)
+    WHERE id = $4"
+    values = [@name, @address, @phone_number, @id]
+    owner = SqlRunner.run(sql, values)[0]
+    return owner
   end
 end
