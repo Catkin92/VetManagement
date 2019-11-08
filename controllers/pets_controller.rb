@@ -5,5 +5,10 @@ also_reload('../models/*')
 
 get '/pets' do
   @pets = Pet.all
-  erb(:"/pets/index")
+  erb(:'/pets/index')
+end
+
+get '/pet/:id' do
+  @pet = Pet.find(params[:id])
+  erb(:'/pets/show')
 end
