@@ -1,4 +1,5 @@
 require_relative('../db/sql_runner.rb')
+require_relative('./pet')
 
 class Owner
 
@@ -41,6 +42,14 @@ class Owner
     sql = "DELETE FROM owners
     WHERE id = $1"
     SqlRunner.run(sql, [@id])
+  end
+
+  def pets
+    sql = "SELECT * FROM pets
+    WHERE owner_id = $1"
+    pets = SqlRunner.run(sql, [@id])
+    found_pets = pets.map { |pet| Pet.new(pet) }
+    return found_pets
   end
 
   def self.all
