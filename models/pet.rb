@@ -59,6 +59,13 @@ class Pet
     return owner
   end
 
+  def vet
+    sql = "SELECT * FROM vets
+    WHERE id = $1"
+    vet = SqlRunner.run(sql, [@vet_id]).first
+    return vet
+  end
+
   def self.all
     sql = "SELECT * FROM pets"
     pets = SqlRunner.run(sql)
