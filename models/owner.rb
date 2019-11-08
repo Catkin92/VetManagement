@@ -34,8 +34,7 @@ class Owner
     $1, $2, $3)
     WHERE id = $4"
     values = [@name, @address, @phone_number, @id]
-    owner = SqlRunner.run(sql, values)[0]
-    return owner
+    SqlRunner.run(sql, values)
   end
 
   def delete
