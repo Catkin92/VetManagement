@@ -1,4 +1,6 @@
 <% for vet in @vets %>
   <h3><%= vet.name %></h3>
-
+  <% for pet in vet.pets %>
+  <p><a href = "/pets/<%= pet.id %>"><%= pet.name %> </a></p>
+  <% end %>
 <% end %>
