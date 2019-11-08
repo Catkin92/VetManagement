@@ -51,4 +51,11 @@ class Pet
     WHERE id = $1"
     SqlRunner.run(sql, [@id])
   end
+
+  def self.all
+    sql = "SELECT * FROM pets"
+    pets = SqlRunner.run(sql)
+    found_pets = pets.map { |pet| Pet.new(pet) }
+    return found_pets
+  end
 end
