@@ -33,4 +33,11 @@ class Vet
     sql = "DELETE FROM vets WHERE id = $1"
     SqlRunner(sql, [@id])
   end
+
+  def self.all
+    sql = "SELECT * FROM vets"
+    vets = SqlRunner.run(sql)
+    found_vets = vets.map { |vet| Vet.new(vet) }
+    return found_vets
+  end
 end
