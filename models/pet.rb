@@ -45,4 +45,10 @@ class Pet
     values = [@name, @dob, @type, @notes, @vet_id, @owner_id, @id]
     SqlRunner.run(sql, values)
   end
+
+  def delete
+    sql = "DELETE FROM pets
+    WHERE id = $1"
+    SqlRunner.run(sql, [@id])
+  end
 end
