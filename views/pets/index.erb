@@ -1,7 +1,7 @@
 <h1>Pets</h1>
 
 <% for pet in @pets %>
-  <h3><a href="/pet/<%= pet.id %>"><%= pet.name.capitalize %></a></h3>
+  <h3><a href="/pets/<%= pet.id %>"><%= pet.name.capitalize %></a></h3>
   <p><b>Owner:</b> <%= pet.owner['name'] %></p>
   <p><b>Vet:</b> <%= pet.vet['name'] %></p>
   <hr>

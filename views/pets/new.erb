@@ -1,0 +1,29 @@
+<h1>Register a pet</h1>
+<form action="/pets" method="post">
+  <label for = "name-field">Name:</label>
+  <input type="text" name="name">
+
+  <label for="dob-field">Date of Birth:</label>
+  <input type="text" name="dob">
+
+  <label for="type-field">Breed:</label>
+  <input type="text" name="type">
+
+  <label for="owner-selection">Owner:</label>
+  <select name="vet_id">
+    <option value="<%= owner1.id %>">Cruella De Vil</option>
+    <option value="<%= owner2.id %>">Alice Liddell</option>
+    <option value="<%= owner3.id %>">Bill Sykes</option>
+  </select>
+
+  <label for="vet-selection">Date of Birth:</label>
+  <select name="vet_id">
+    <option value="<%= vet1.id %>">Dr. John Dolittle</option>
+    <option value="<%= vet2.id %>">Dr. Morwenna Hamster</option>
+  </select>
+
+  <label for="notes-field">Notes:</label>
+  <textarea name="notes" rows="8" cols="80"></textarea>
+
+  <input type="submit" value="Register">
+</form>
