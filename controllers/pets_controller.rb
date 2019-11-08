@@ -16,13 +16,26 @@ get '/pets/new' do
   erb(:'/pets/new')
 end
 
+post '/pets' do
+  @pet = Pet.new(params)
+  @pet.save
+  redirect to (:'/pets')
+end
+
 get '/pets/:id' do
   @pet = Pet.find(params[:id])
   erb(:'/pets/show')
 end
 
-post '/pets' do
+get '/pets/:id/edit' do
+  @pet = Pet.find(params[:id])
+  @owners = Owner.all
+  @vets = Vet.all
+  erb(:'/pets/edit')
+end
+
+post '/pets/:id' do
   @pet = Pet.new(params)
-  @pet.save
-  redirect to (:'/pets')
+  @pet.update
+  redirect to (:'/pets/:id')
 end
