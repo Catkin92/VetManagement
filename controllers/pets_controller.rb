@@ -19,7 +19,7 @@ end
 post '/pets' do
   @pet = Pet.new(params)
   @pet.save
-  redirect to (:'/pets')
+  redirect to ('/pets')
 end
 
 get '/pets/:id' do
@@ -28,14 +28,16 @@ get '/pets/:id' do
 end
 
 get '/pets/:id/edit' do
-  @pet = Pet.find(params[:id])
+  @pet = Pet.find(params['id'])
   @owners = Owner.all
   @vets = Vet.all
   erb(:'/pets/edit')
 end
 
+# InvalidTextRepresentation at /pets/:id
+
 post '/pets/:id' do
   @pet = Pet.new(params)
   @pet.update
-  redirect to (:'/pets/:id')
+  redirect to "/pets/#{params['id']}"
 end
