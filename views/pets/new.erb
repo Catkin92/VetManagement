@@ -12,14 +12,14 @@
   <label for="owner-selection">Owner:</label>
   <select name="owner_id">
     <% for owner in @owners %>
-    <option value="<%= owner.id %>"<%= owner.name %></option>
+    <option value="<%= owner.id %>"><%= owner.name %></option>
     <% end %>
   </select>
 
   <label for="vet-selection">Owner:</label>
   <select name="vet_id">
     <% for vet in @vets %>
-    <option value="<%= vet.id %>"<%= vet.name %></option>
+    <option value="<%= vet.id %>"><%= vet.name %></option>
     <% end %>
   </select>
 
