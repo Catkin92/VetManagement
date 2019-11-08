@@ -1,4 +1,4 @@
-DROP TABLE animals;
+DROP TABLE pets;
 DROP TABLE vets;
 DROP TABLE owners;
 
