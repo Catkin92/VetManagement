@@ -4,7 +4,16 @@ require_relative('../models/owner.rb')
 require_relative('../models/pet.rb')
 also_reload('../models/*')
 
-get '/owner/:id' do
-  @owner = Owner.find(:id)
-  erb(:'/owner/show')
+get '/owners' do
+  @owners = Owner.all
+  erb(:'/owners/index')
+end
+
+get '/owners/new' do
+  erb(:'/owners/new')
+end
+
+get '/owners/:id' do
+  @owner = Owner.find(params['id'])
+  erb(:'/owners/show')
 end

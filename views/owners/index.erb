@@ -1,0 +1,9 @@
+<h1>Owners</h1>
+
+<a id="register-owner" href="/owners/new">Register a New Owner</a>
+
+<% for owner in @owners %>
+  <h3><a href="/owners/<%= owner.id %>"><%= owner.name.capitalize %></a></h3>
+  <p><b>Pets:</b> <%= owner.pets %></p>
+  <hr>
+<% end %>

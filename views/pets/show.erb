@@ -1,9 +1,6 @@
 <h1><%= @pet['name'] %></h1>
 <p><b>Date of Birth:</b> <%= @pet['dob'] %></p>
 <p><b>Breed:</b> <%= @pet['type'].capitalize %></p>
-<p><b><a href="/owner/<%= @pet['owner_id'] %>">Owner</a></b>
+<p><b><a href="/owners/<%= @pet['owner_id'] %>">Owner </a></b>
 <p><b>Notes:</b> <%= @pet['notes'] %></p>
 <p><b><a id="edit-pet" href="/pets/<%= @pet['id'] %>/edit">Edit Information</a></b></p>
-
-
-# owner id link doesn't work

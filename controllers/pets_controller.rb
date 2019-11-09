@@ -28,7 +28,7 @@ get '/pets/:id' do
 end
 
 get '/pets/:id/edit' do
-  @pet = Pet.find(params['id'])
+  @pet = Pet.find(params[:id])
   @owners = Owner.all
   @vets = Vet.all
   erb(:'/pets/edit')
