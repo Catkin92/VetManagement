@@ -13,6 +13,12 @@ get '/owners/new' do
   erb(:'/owners/new')
 end
 
+post '/owners' do
+  @owner = Owner.new(params)
+  @owner.save
+  redirect to '/owners'
+end
+
 get '/owners/:id' do
   @owner = Owner.find(params['id'])
   erb(:'/owners/show')
