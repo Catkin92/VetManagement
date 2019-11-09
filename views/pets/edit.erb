@@ -18,18 +18,18 @@
   </select>
 
  <label for="vet-selection">Vet:</label>
- <select name="vet_id" selected="<%=  @pet['vet_id'] %>">
+ <select name="vet_id" selected="<%= @pet['vet_id'] %>">
    <% for vet in @vets %>
      <% if vet.id == @pet['vet_id'] %>
       <option value=<%= vet.id %>selected><%= vet.name %></option>
       <% else %>
-      <option value=<%= vet.id %>><%= vet.name %></option>
+      <option value="<%= vet.id %>"><%= vet.name %></option>
      <% end %>
    <% end %>
   </select>
 
   <label for="notes-field">Notes:</label>
-  <textarea name="notes" rows="8" cols="80"></textarea>
+  <textarea name="notes" rows="8" cols="80"><%= @pet['notes'] %></textarea>
 
   <input type="submit" value="Register">
 </form>
