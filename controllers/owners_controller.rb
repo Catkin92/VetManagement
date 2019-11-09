@@ -5,6 +5,6 @@ require_relative('../models/pet.rb')
 also_reload('../models/*')
 
 get '/owner/:id' do
-  @owner = Owner.find(params[:id])
+  @owner = Owner.find(:id)
   erb(:'/owner/show')
 end
