@@ -3,7 +3,9 @@
 <a id="register-owner" href="/owners/new">Register a New Owner</a>
 
 <% for owner in @owners %>
-  <h3><a href="/owners/<%= owner.id %>"><%= owner.name.capitalize %></a></h3>
-  <p><b>Pets:</b> <%= owner.pets %></p>
+  <h3><a href="/owners/<%= owner.id %>"><%= owner.name %></a></h3>
+  <p><b>Pets:</b></p> <% for pet in owner.pets %>
+    <p><a href="/pets/<%= pet.id %>"><%= pet.name %></a></p>
+    <% end %>
   <hr>
 <% end %>

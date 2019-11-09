@@ -17,3 +17,8 @@ get '/owners/:id' do
   @owner = Owner.find(params['id'])
   erb(:'/owners/show')
 end
+
+get '/owners/:id/edit' do
+  @owner = Owner.find(params[:id])
+  erb(:'/owners/edit')
+end
