@@ -2,3 +2,26 @@ a {
   text-decoration: none;
   color: black;
 }
+
+a:hover {
+  color: #7FD8BE;
+}
+
+p, h1, h3, a, form, option {
+  font-family: 'Raleway', sans-serif;
+}
+
+#home_button, #pets_button, #vets_button {
+  padding-left: 10px;
+  padding-top: 10px;
+  font-size: 20px;
+  color: #7FD8BE;
+}
+
+#register-pet, #edit-pet {
+  border-width: : 1px;
+  border-style: solid;
+  border-color: #7FD8BE;
+  border-radius: 5px;
+  padding: 5px;
+}
