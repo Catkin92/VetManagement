@@ -34,8 +34,6 @@ get '/pets/:id/edit' do
   erb(:'/pets/edit')
 end
 
-# InvalidTextRepresentation at /pets/:id
-
 post '/pets/:id' do
   @pet = Pet.new(params)
   @pet.update
