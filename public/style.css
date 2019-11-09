@@ -3,10 +3,6 @@ a {
   color: black;
 }
 
-a:hover {
-  color: #7FD8BE;
-}
-
 p, h1, h3, a, form, option {
   font-family: 'Raleway', sans-serif;
 }
@@ -24,4 +20,27 @@ p, h1, h3, a, form, option {
   border-color: #7FD8BE;
   border-radius: 5px;
   padding: 5px;
+
+
+}
+
+a:hover {
+  color: #7FD8BE;
+}
+
+li a {
+  color: #F1F2EB;
+}
+
+li {
+  display: inline-block;
+  font-size: 20px;
+}
+
+ul {
+  background-color: #4A4A48;
+  padding: 15px;
+  padding-top: 8px;
+  display: flex;
+  justify-content: flex-start;
 }

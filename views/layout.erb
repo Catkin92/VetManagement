@@ -9,10 +9,12 @@
   </head>
   <body>
     <nav>
-      <i class="fas fa-home"id="home_button"></i><a href = "/">Home</a>
-      <i class="fas fa-paw" id="pets_button"></i>  <a href = "/pets">Pets</a>
-      <i class="fas fa-stethoscope"id="vets_button"></i><a href = "/vets">Vets</a>
-      <i class="fas fa-user-alt"id="owners_button"></i><a href = "/owners">Owners</a>
+      <ul>
+      <li><i class="fas fa-home"id="home_button"></i><a href = "/">Home</a></li>
+      <li><i class="fas fa-paw" id="pets_button"></i>  <a href = "/pets">Pets</a></li>
+      <li><i class="fas fa-stethoscope"id="vets_button"></i><a href = "/vets">Vets</a></li>
+      <li><i class="fas fa-user-alt"id="owners_button"></i><a href = "/owners">Owners</a></li>
+      </ul>
     </nav>
     <%= yield %>
   </body>
