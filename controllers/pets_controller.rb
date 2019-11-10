@@ -11,12 +11,14 @@ get '/pets' do
 end
 
 get '/pets/new' do
-  @owners = Owner.all
+  owners = Owner.all
+  @owners = owners.sort { |a, b| a.name <=> b.name }
   @vets = Vet.all
   erb(:'/pets/new')
 end
 
 post '/pets' do
+  Owner.new(params).save
   @pet = Pet.new(params)
   @pet.save
   redirect to ('/pets')
