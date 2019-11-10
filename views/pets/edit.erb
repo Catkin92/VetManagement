@@ -6,11 +6,11 @@
 <br>
 <br>
   <label for="dob-field">Date of Birth:</label>
-  <input type="text" name="dob" value="<%= @pet['dob'] %>">
+  <input type="date" name="dob" placeholder="DD/MM/YY" size="9" value="<%= @pet['dob'] %>">
 <br>
 <br>
   <label for="type-field">Breed:</label>
-  <input type="text" name="type" value="<%= @pet['type'] %>">
+  <input type="text" name="type" value="<%= @pet['type'].capitalize %>">
 <br>
 <br>
   <label for="owner-selection">Owner:</label>
@@ -40,7 +40,7 @@
 <br>
   <label for="notes-field">Notes:</label>
   <br>
-  <textarea name="notes" rows="8" cols="80"><%= @pet['notes'] %></textarea>
+  <textarea name="notes" rows="8" cols="80"  wrap="hard"><%= @pet['notes']%></textarea>
 <br>
 <br>
   <input type="submit" value="Update">

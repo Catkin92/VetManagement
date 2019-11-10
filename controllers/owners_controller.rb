@@ -29,6 +29,7 @@ get '/owners/:id/edit' do
   erb(:'/owners/edit')
 end
 
-post 'owners/:id' do
-  redirect to '/owners/:id'
+post '/owners/:id' do
+  Owner.new(params).update
+  redirect to "/owners/#{params['id']}"
 end
