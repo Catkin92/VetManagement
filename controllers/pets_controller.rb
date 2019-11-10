@@ -11,9 +11,8 @@ get '/pets' do
 end
 
 get '/pets/new' do
-  owners = Owner.all
-  @owners = owners.sort { |a, b| a.name <=> b.name }
-  @vets = Vet.all
+  @owners = Owners.all.sort { |a, b| a.name <=> b.name }
+  @vets = Vet.all.sort { |a, b| a.name <=> b.name }
   erb(:'/pets/new')
 end
 
@@ -31,8 +30,8 @@ end
 
 get '/pets/:id/edit' do
   @pet = Pet.find(params[:id])
-  @owners = Owner.all
-  @vets = Vet.all
+  @owners = Owner.all.sort { |a, b| a.name <=> b.name}
+  @vets = Vet.all.sort { |a, b| a.name <=> b.name }
   erb(:'/pets/edit')
 end
 
