@@ -11,7 +11,7 @@ get '/pets' do
 end
 
 get '/pets/new' do
-  @owners = Owners.all.sort { |a, b| a.name <=> b.name }
+  @owners = Owner.all.sort { |a, b| a.name <=> b.name }
   @vets = Vet.all.sort { |a, b| a.name <=> b.name }
   erb(:'/pets/new')
 end
@@ -25,6 +25,7 @@ end
 
 get '/pets/:id' do
   @pet = Pet.find(params[:id])
+  @owner = Owner.find(@pet['id'])
   erb(:'/pets/show')
 end
 

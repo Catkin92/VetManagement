@@ -14,16 +14,15 @@
 <br>
 <br>
   <label for="owner-selection">Owner:</label>
-  <select name="owner_id"
-    selected="<%= @pet['owner_id']  %>">
-        <% @owners.each do |owner| %>
-          <% if owner.id == @pet['owner_id'] %>
-            <option value=<%= owner.id %> selected><%= owner.name %></option>
+  <select name="owner_id">
+    <% @owners.each do |owner| %>
+      <% if owner.id == @pet['owner_id'] %>
+          <option value= <%= owner.id %>selected><%= owner.name %></option>
           <% else %>
-            <option value=<%= owner.id %>><%= owner.name %></option>
-          <% end %>
-        <% end %>
-      </select>
+          <option value=<%= owner.id %>><%= owner.name %></option>
+      <% end %>
+    <% end %>
+  </select>
 <br>
 <br>
  <label for="vet-selection">Vet:</label>
