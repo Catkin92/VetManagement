@@ -3,13 +3,16 @@
 <form action="/pets/<%= @pet['id'] %>" method="post">
   <label for = "name-field">Name:</label>
   <input type="text" name="name" value="<%= @pet['name']%>">
-
+<br>
+<br>
   <label for="dob-field">Date of Birth:</label>
   <input type="text" name="dob" value="<%= @pet['dob'] %>">
-
+<br>
+<br>
   <label for="type-field">Breed:</label>
   <input type="text" name="type" value="<%= @pet['type'] %>">
-
+<br>
+<br>
   <label for="owner-selection">Owner:</label>
   <select name="owner_id"
     selected="<%= @pet['owner_id']  %>">
@@ -20,9 +23,9 @@
             <option value=<%= owner.id %>><%= owner.name %></option>
           <% end %>
         <% end %>
-
-  </select>
-
+      </select>
+<br>
+<br>
  <label for="vet-selection">Vet:</label>
  <select name="vet_id" selected="<%= @pet['vet_id'] %>">
    <% for vet in @vets %>
@@ -33,9 +36,12 @@
      <% end %>
    <% end %>
   </select>
-
+<br>
+<br>
   <label for="notes-field">Notes:</label>
+  <br>
   <textarea name="notes" rows="8" cols="80"><%= @pet['notes'] %></textarea>
-
+<br>
+<br>
   <input type="submit" value="Update">
 </form>
