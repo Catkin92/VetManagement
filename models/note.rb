@@ -19,9 +19,9 @@ class Note
     note_date,
     note
     ) VALUES(
-    $1, $2, $3
+    $1, now(), $2
     ) RETURNING *"
-    values = [@pet_id, @note_date, @note]
+    values = [@pet_id, @note]
     save = SqlRunner.run(sql, values).first
     @id = save['id']
   end
@@ -32,8 +32,8 @@ class Note
     note_date,
     note
     ) = (
-    $1, $2, $3
-    ) WHERE id = $4"
+    $1, , now(), $2
+    ) WHERE id = $3"
     values = [@pet_id, @note_date, @note, @id]
     SqlRunner.run(sql, values)
   end

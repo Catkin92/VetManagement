@@ -2,4 +2,11 @@
 <p><b>Date of Birth:</b> <%= @pet.dob %></p>
 <p><b>Breed:</b> <%= @pet.type.capitalize %></p>
 <p><b>Owner:</b><a href="/owners/<%= @pet.owner_id %>"> <%= @owner.name %> </a>
+
+  <% for note in @notes %>
+    <p> <span style="color:grey"><%= note.note_date %></span>
+     <%= note.note %></p>
+     <hr>
+  <% end %>
+  
 <p><b><a id="edit-pet" href="/pets/<%= @pet.id %>/edit">Edit Information</a><a id="delete-pet" href="/pets/delete/<%= @pet.id %>">Delete Pet</a></b></p>
