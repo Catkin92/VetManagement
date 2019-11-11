@@ -3,6 +3,7 @@ require('sinatra/contrib/all')
 require_relative('../models/pet.rb')
 require_relative('../models/vet.rb')
 require_relative('../models/owner.rb')
+require_relative('../models/note.rb')
 also_reload('../models/*')
 
 get '/pets' do
@@ -44,6 +45,7 @@ post '/pets/:id' do
 end
 
 get '/pets/delete/:id' do
+  Note.delete_by_pet(params[:id])
   @pet = Pet.find(params[:id])
   @pet.delete
   redirect to "/pets"
