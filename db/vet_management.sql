@@ -26,7 +26,7 @@ CREATE TABLE pets(
 
 CREATE TABLE notes(
   id SERIAL4 PRIMARY KEY,
-  pet_id INT4 REFERENCES pet(id),
+  pet_id INT4 REFERENCES pets(id),
   note_date DATE NOT NULL DEFAULT CURRENT_DATE,
   note TEXT
 );

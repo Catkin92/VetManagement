@@ -45,12 +45,12 @@ class Note
 
   def self.delete_by_pet(id)
     sql = "DELETE FROM notes WHERE pet_id = $1"
-    SqlRunner.run(sql, [@pet_id])
+    SqlRunner.run(sql, [id])
   end
 
   def self.find_by_pet(id)
     sql = "SELECT * FROM notes WHERE pet_id = $1"
-    pet_notes = SqlRunner.run(sql, [@pet_id])
+    pet_notes = SqlRunner.run(sql, [id])
     notes = pet_notes.map { |note| Note.new(note) }
     return notes
   end

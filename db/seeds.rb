@@ -2,7 +2,7 @@ require('pry')
 require_relative('../models/owner.rb')
 require_relative('../models/vet.rb')
 require_relative('../models/pet.rb')
-
+require_relative('../models/note.rb')
 
 owner1 = Owner.new(
   'name' => 'Cruella De Vil',
@@ -60,6 +60,23 @@ pet1.save
 pet2.save
 pet3.save
 pet4.save
+
+  note1 = Note.new(
+    'pet_id' => pet1.id,
+    'note_date' => '2007-12-04',
+    'note' => 'Patch is presenting with mild alopecia.')
+  note2 = Note.new(
+    'pet_id' => pet1.id,
+    'note_date' => '2007-10-17',
+    'note' => 'Patch has some bald patches.')
+  note3 = Note.new(
+    'pet_id' => pet4.id,
+    'note_date' => '2016-05-10',
+    'note' => 'Roscoe seems to be getting more aggressive.')
+
+note1.save
+note2.save
+note3.save
 
 # binding.pry
 #
