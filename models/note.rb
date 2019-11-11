@@ -26,4 +26,16 @@ class Note
     @id = save['id']
   end
 
+  def update
+    sql = "UPDATE notes SET(
+    pet_id,
+    note_date,
+    note
+    ) = (
+    $1, $2, $3
+    ) WHERE id = $4"
+    values = [@pet_id, @note_date, @note, @id]
+    SqlRunner.run(sql, values)
+  end
+
 end
