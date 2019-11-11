@@ -3,4 +3,4 @@
 <p><b>Breed:</b> <%= @pet.type.capitalize %></p>
 <p><b>Owner:</b><a href="/owners/<%= @pet.owner_id %>"> <%= @owner.name %> </a>
 <p><b>Notes:</b> <%= @pet.notes %></p>
-<p><b><a id="edit-pet" href="/pets/<%= @pet.id %>/edit">Edit Information</a></b></p>
+<p><b><a id="edit-pet" href="/pets/<%= @pet.id %>/edit">Edit Information</a><a id="delete-pet" href="/pets/delete/<%= @pet.id %>">Delete Pet</a></b></p>

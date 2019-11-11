@@ -42,3 +42,9 @@ post '/pets/:id' do
   @pet.update
   redirect to "/pets/#{params['id']}"
 end
+
+get '/pets/delete/:id' do
+  @pet = Pet.find(params[:id])
+  @pet.delete
+  redirect to "/pets"
+end

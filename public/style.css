@@ -18,7 +18,7 @@ p, h1, h3, a, form, option {
   color: #7FD8BE;
 }
 
-#register-pet, #edit-pet, #register-owner, #edit-owner, #delete-owner {
+#register-pet, #edit-pet, #register-owner, #edit-owner, #delete-owner, #delete-pet {
   border-width: : 1px;
   border-style: solid;
   border-color: #7FD8BE;
