@@ -11,6 +11,9 @@ p, h1, h3, a, form, option {
   font-family: 'Raleway', sans-serif;
 }
 
+hr {
+  border: 1px solid #7FD8BE;
+}
 #home_button, #pets_button, #vets_button, #owners_button {
   padding-left: 10px;
   padding-top: 10px;
@@ -24,6 +27,7 @@ p, h1, h3, a, form, option {
   border-color: #7FD8BE;
   border-radius: 5px;
   padding: 5px;
+  margin-right: 10px;
 }
 
 a:hover {
