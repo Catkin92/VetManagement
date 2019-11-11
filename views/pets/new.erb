@@ -14,40 +14,18 @@
 <br>
   <label for="owner-selection">Owner:</label>
   <select name="owner_id">
-    <option>New Owner</option>
     <% for owner in @owners %>
     <option value="<%= owner.id %>"><%= owner.name %></option>
     <% end %>
   </select>
 <br>
 <br>
-
-<!-- <div style="display:none">
-  <label for="name-field">Name:</label>
-    <input type="text" name="name">
-  <br>
-  <br>
-  <label for="address-field">Address:</label>
-    <input type="text" name="address">
-  <br>
-  <br>
-  <label for="phone-number-field">Phone Number:</label>
-    <input type="tel" name="phone_number"
-    minlength="10" maxlength="13" size="13">
-    <br>
-    <br>
-  </div> -->
   <label for="vet-selection">Vet:</label>
   <select name="vet_id">
     <% for vet in @vets %>
     <option value="<%= vet.id %>"><%= vet.name %></option>
     <% end %>
   </select>
-<br>
-<br>
-  <label for="notes-field">Notes:</label>
-  <br>
-  <textarea name="notes" rows="8" cols="80"></textarea>
 <br>
 <br>
   <input type="submit" value="Register">

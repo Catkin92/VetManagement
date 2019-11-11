@@ -5,7 +5,7 @@ DROP TABLE owners;
 CREATE TABLE owners(
   id SERIAL4 PRIMARY KEY,
   name VARCHAR(255),
-  address VARCHAR(255),
+  address TEXT,
   phone_number VARCHAR(255)
 );
 
@@ -19,7 +19,6 @@ CREATE TABLE pets(
   name VARCHAR(255),
   dob VARCHAR(255),
   type VARCHAR(255),
-  notes TEXT,
   vet_id INT4 REFERENCES vets(id),
   owner_id INT4 REFERENCES owners(id)
 );

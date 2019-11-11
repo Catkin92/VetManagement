@@ -10,7 +10,6 @@ class Pet
     @name = options['name']
     @dob = options['dob']
     @type = options['type']
-    @notes = options['notes']
     @vet_id = options['vet_id'].to_i
     @owner_id = options['owner_id'].to_i
   end
@@ -20,13 +19,12 @@ class Pet
     name,
     dob,
     type,
-    notes,
     vet_id,
     owner_id
     ) VALUES(
-    $1, $2, $3, $4, $5, $6
+    $1, $2, $3, $4, $5
     ) RETURNING *"
-    values = [@name, @dob, @type, @notes, @vet_id, @owner_id]
+    values = [@name, @dob, @type, @vet_id, @owner_id]
     save = SqlRunner.run(sql, values).first
     @id = save['id']
   end
@@ -36,13 +34,12 @@ class Pet
     name,
     dob,
     type,
-    notes,
     vet_id,
     owner_id
     ) = (
-    $1, $2, $3, $4, $5, $6
-    ) WHERE id = $7"
-    values = [@name, @dob, @type, @notes, @vet_id, @owner_id, @id]
+    $1, $2, $3, $4, $5
+    ) WHERE id = $6"
+    values = [@name, @dob, @type, @vet_id, @owner_id, @id]
     SqlRunner.run(sql, values)
   end
 

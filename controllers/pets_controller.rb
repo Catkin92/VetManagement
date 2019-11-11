@@ -17,7 +17,6 @@ get '/pets/new' do
 end
 
 post '/pets' do
-  Owner.new(params).save
   @pet = Pet.new(params)
   @pet.save
   redirect to ('/pets')
