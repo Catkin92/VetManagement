@@ -15,6 +15,14 @@ post '/notes/:id' do
   redirect to "/pets/#{params['id']}"
 end
 
-get '/notes/:id/:pet_id/edit' do
-  @note = 
+get '/notes/edit/:id' do
+  @note = Note.find(params[:id])
+  erb(:'/notes/edit')
+end
+
+post '/notes/note/:id' do
+  @note = Note.new(params)
+  @note.update
+  @pet_id = @note.pet_id
+  redirect to "/pets/#{@pet_id}"
 end

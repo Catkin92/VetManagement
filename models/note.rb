@@ -32,9 +32,9 @@ class Note
     note_date,
     note
     ) = (
-    $1, , now(), $2
+    $1, now(), $2
     ) WHERE id = $3"
-    values = [@pet_id, @note_date, @note, @id]
+    values = [@pet_id, @note, @id]
     SqlRunner.run(sql, values)
   end
 
@@ -58,6 +58,6 @@ class Note
   def self.find(id)
     sql = "SELECT * FROM notes WHERE id = $1"
     found_note = SqlRunner.run(sql, [id]).first
-    return found_note
+    return Note.new(found_note)
   end
 end

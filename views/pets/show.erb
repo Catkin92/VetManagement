@@ -8,7 +8,8 @@
 <p><b><a id="add-note" href="/notes/<%= @pet.id %>/new">Add New Note</a></b></p>
   <% for note in @notes %>
     <p> <span style="color:grey"><%= note.note_date %></span>
-     <%= note.note %></p>
+     <%= note.note %>
+    <b><a id="edit-note" href="/notes/edit/<%= note.id %>">Edit Note</a></b></p>
      <hr>
   <% end %>
 <br>

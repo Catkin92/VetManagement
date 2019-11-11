@@ -1,0 +1,12 @@
+<form action="/notes/note/<%= @note.id %>"  method="post">
+
+  <label for="note-field">New Note:</label>
+  <br>
+  <textarea name="note" rows="8" cols="80"><%= @note.note %></textarea>
+  <br>
+
+  <select style="display:none" name="pet_id">
+    <option value=<%= @note.pet_id %>></option>
+  </select>
+  <input type="submit" value="Update">
+</form>
