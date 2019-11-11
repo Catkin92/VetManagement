@@ -4,7 +4,8 @@
 <p><b>Owner:</b><a href="/owners/<%= @pet.owner_id %>"> <%= @owner.name %> </a>
   <br>
   <br>
-<h3>Notes:</h3><b><a id="add-note" href="/notes/<%= @pet.id %>/new">Add New Note</a></b>
+<p><b><a id="add-note" href="/notes/<%= @pet.id %>/new">Add New Note</a></b></p>
+<h3>Notes:</h3>
   <% for note in @notes %>
     <p> <span style="color:grey"><%= note.note_date %></span>
      <%= note.note %></p>
