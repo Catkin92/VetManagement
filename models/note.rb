@@ -38,4 +38,8 @@ class Note
     SqlRunner.run(sql, values)
   end
 
+  def delete
+    sql = "DELETE FROM notes WHERE id = $1"
+    SqlRunner.run(sql, [@id])
+  end
 end
