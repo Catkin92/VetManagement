@@ -21,7 +21,7 @@ hr {
   color: #7FD8BE;
 }
 
-#register-pet, #edit-pet, #register-owner, #edit-owner, #delete-owner, #delete-pet {
+#register-pet, #edit-pet, #register-owner, #edit-owner, #delete-owner, #delete-pet, #add-note {
   border-width: : 1px;
   border-style: solid;
   border-color: #7FD8BE;

@@ -1,7 +1,9 @@
 <h1>Notes for <%= @pet.name %></h1>
 
 <% for note in @notes %>
-   <span style="color:grey"><%= note.note_date %></span>
-   <%= note.note %>
+  <p> <span style="color:grey"><%= note.note_date %></span>
+   <%= note.note %></p>
    <hr>
 <% end %>
+
+<p><b><a id="add-note" href="/notes/<%= @pet.id %>/new">Add New Note</a></b></p>

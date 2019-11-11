@@ -9,3 +9,14 @@ get '/notes/:id' do
   @notes = Note.find_by_pet(params[:id])
   erb(:'/notes/show')
 end
+
+get '/notes/:id/new' do
+  @pet = Pet.find(params[:id])
+  erb(:'/notes/new')
+end
+
+post '/notes/:id' do
+  @note = Note.new(params)
+  @note.save
+  redirect to "/notes/#{params['id']}"
+end
