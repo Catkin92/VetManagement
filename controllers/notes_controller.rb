@@ -14,3 +14,7 @@ post '/notes/:id' do
   @note.save
   redirect to "/pets/#{params['id']}"
 end
+
+get '/notes/:id/:pet_id/edit' do
+  @note = 
+end

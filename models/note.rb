@@ -54,4 +54,10 @@ class Note
     notes = pet_notes.map { |note| Note.new(note) }
     return notes
   end
+
+  def self.find(id)
+    sql = "SELECT * FROM notes WHERE id = $1"
+    found_note = SqlRunner.run(sql, [id]).first
+    return found_note
+  end
 end
