@@ -1,3 +1,4 @@
+DROP TABLE notes;
 DROP TABLE pets;
 DROP TABLE vets;
 DROP TABLE owners;
@@ -21,4 +22,11 @@ CREATE TABLE pets(
   type VARCHAR(255),
   vet_id INT4 REFERENCES vets(id),
   owner_id INT4 REFERENCES owners(id)
+);
+
+CREATE TABLE notes(
+  id SERIAL4 PRIMARY KEY,
+  pet_id INT4 REFERENCES pet(id),
+  note_date DATE NOT NULL DEFAULT CURRENT_DATE,
+  note TEXT
 );
