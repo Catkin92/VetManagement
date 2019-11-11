@@ -77,7 +77,7 @@ class Pet
     sql = "SELECT * FROM pets
     WHERE id = $1"
     pet = SqlRunner.run(sql, [id]).first
-    return pet
+    return Pet.new(pet)
   end
 
 end

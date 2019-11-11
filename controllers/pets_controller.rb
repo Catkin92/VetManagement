@@ -25,7 +25,8 @@ end
 
 get '/pets/:id' do
   @pet = Pet.find(params[:id])
-  @owner = Owner.find(@pet['id'])
+  id = @pet.owner_id
+  @owner = Owner.find(id)
   erb(:'/pets/show')
 end
 

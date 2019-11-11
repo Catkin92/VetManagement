@@ -1,23 +1,23 @@
-<h1>Edit information for <%= @pet['name'] %></h1>
+<h1>Edit information for <%= @pet.name %></h1>
 
-<form action="/pets/<%= @pet['id'] %>" method="post">
+<form action="/pets/<%= @pet.id %>" method="post">
   <label for = "name-field">Name:</label>
-  <input type="text" name="name" value="<%= @pet['name']%>">
+  <input type="text" name="name" value="<%= @pet.name%>">
 <br>
 <br>
   <label for="dob-field">Date of Birth:</label>
-  <input type="date" name="dob" placeholder="DD/MM/YY" size="9" value="<%= @pet['dob'] %>">
+  <input type="date" name="dob" placeholder="DD/MM/YY" size="9" value="<%= @pet.dob %>">
 <br>
 <br>
   <label for="type-field">Breed:</label>
-  <input type="text" name="type" value="<%= @pet['type'].capitalize %>">
+  <input type="text" name="type" value="<%= @pet.type.capitalize %>">
 <br>
 <br>
   <label for="owner-selection">Owner:</label>
   <select name="owner_id">
     <% @owners.each do |owner| %>
-      <% if owner.id == @pet['owner_id'] %>
-          <option value= <%= owner.id %>selected><%= owner.name %></option>
+      <% if owner.id == @pet.owner_id %>
+          <option value= <%= owner.id %> selected><%= owner.name %></option>
           <% else %>
           <option value=<%= owner.id %>><%= owner.name %></option>
       <% end %>
@@ -26,10 +26,10 @@
 <br>
 <br>
  <label for="vet-selection">Vet:</label>
- <select name="vet_id" selected="<%= @pet['vet_id'] %>">
+ <select name="vet_id">
    <% for vet in @vets %>
-     <% if vet.id == @pet['vet_id'] %>
-      <option value=<%= vet.id %>selected><%= vet.name %></option>
+     <% if vet.id == @pet.vet_id %>
+      <option value=<%= vet.id %> selected><%= vet.name %></option>
       <% else %>
       <option value="<%= vet.id %>"><%= vet.name %></option>
      <% end %>
@@ -39,7 +39,7 @@
 <br>
   <label for="notes-field">Notes:</label>
   <br>
-  <textarea name="notes" rows="8" cols="80"  wrap="hard"><%= @pet['notes']%></textarea>
+  <textarea name="notes" rows="8" cols="80"  wrap="hard"><%= @pet.notes%></textarea>
 <br>
 <br>
   <input type="submit" value="Update">

@@ -18,14 +18,12 @@ p, h1, h3, a, form, option {
   color: #7FD8BE;
 }
 
-#register-pet, #edit-pet, #register-owner, #edit-owner {
+#register-pet, #edit-pet, #register-owner, #edit-owner, #delete-owner {
   border-width: : 1px;
   border-style: solid;
   border-color: #7FD8BE;
   border-radius: 5px;
   padding: 5px;
-
-
 }
 
 a:hover {
