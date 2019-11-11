@@ -12,5 +12,5 @@ end
 post '/notes/:id' do
   @note = Note.new(params)
   @note.save
-  redirect to "/notes/#{params['id']}"
+  redirect to "/pets/#{params['id']}"
 end
