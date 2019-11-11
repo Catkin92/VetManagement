@@ -42,4 +42,9 @@ class Note
     sql = "DELETE FROM notes WHERE id = $1"
     SqlRunner.run(sql, [@id])
   end
+
+  def self.delete_by_pet(id)
+    sql = "DELETE FROM notes WHERE pet_id = $1"
+    SqlRunner.run(sql, [@pet_id])
+  end
 end
