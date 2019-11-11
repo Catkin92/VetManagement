@@ -1,4 +1,5 @@
 <h1><%= @owner.name %></h1>
 <p><b>Address:</b> <%= @owner.address %></p>
 <p><b>Phone Number:</b> <%= @owner.phone_number %></p>
-<p><b><a id="edit-owner" href="/owners/<%= @owner.id %>/edit">Edit Information</a></b></p>
+<p><b><a id="edit-owner" href="/owners/<%= @owner.id %>/edit">Edit Information</a><a href=/owners/delete/<%= @owner.id %>>Delete Owner</a></b>
+</p>

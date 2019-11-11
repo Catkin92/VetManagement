@@ -1,0 +1,10 @@
+<form action="/owners" method="post">
+  <label>Are you sure you want to delete this owner?</label>
+  <% if %>
+  <input type="radio" name="delete" value="yes">
+  <% @owner.delete %>
+  <% end %>
+  <input type="radio" name="delete" value="no">
+
+  <input type="submit" value="Delete">
+</form>

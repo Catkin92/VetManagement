@@ -33,3 +33,11 @@ post '/owners/:id' do
   Owner.new(params).update
   redirect to "/owners/#{params['id']}"
 end
+
+get '/owners/delete/:id' do
+  @owner = Owner.find(params[:id])
+  @pets = @owner.pets
+  @pets.each { |pet| pet.delete }
+  @owner.delete
+  redirect to "/owners"
+end
