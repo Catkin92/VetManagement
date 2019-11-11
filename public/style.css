@@ -21,13 +21,17 @@ hr {
   color: #7FD8BE;
 }
 
-#register-pet, #edit-pet, #register-owner, #edit-owner, #delete-owner, #delete-pet, #add-note {
+#register-pet, #edit-pet, #register-owner, #edit-owner, #delete-owner, #delete-pet, #add-note, #edit-note, #delete-note {
   border-width: : 1px;
   border-style: solid;
   border-color: #7FD8BE;
   border-radius: 5px;
   padding: 5px;
   margin-right: 10px;
+}
+
+#edit-note {
+  text-align: end;
 }
 
 a:hover {

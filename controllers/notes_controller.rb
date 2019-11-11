@@ -26,3 +26,10 @@ post '/notes/note/:id' do
   @pet_id = @note.pet_id
   redirect to "/pets/#{@pet_id}"
 end
+
+get '/notes/delete/:id' do
+  @note = Note.find(params[:id])
+  @pet_id = @note.pet_id
+  @note.delete
+  redirect to "/pets/#{@pet_id}"
+end

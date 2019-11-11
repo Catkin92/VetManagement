@@ -9,7 +9,8 @@
   <% for note in @notes %>
     <p> <span style="color:grey"><%= note.note_date %></span>
      <%= note.note %>
-    <b><a id="edit-note" href="/notes/edit/<%= note.id %>">Edit Note</a></b></p>
+    <b><a id="edit-note" href="/notes/edit/<%= note.id %>">Edit Note</a></b>
+    <b><a id="delete-note" href="/notes/delete/<%= note.id %>">Delete Note</a></b></p>
      <hr>
   <% end %>
 <br>
