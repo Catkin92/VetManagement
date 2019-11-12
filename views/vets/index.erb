@@ -1,3 +1,4 @@
+<h1>Vets</h1>
 <% for vet in @vets %>
   <h3><%= vet.name %></h3>
   <% for pet in vet.pets %>
@@ -5,3 +6,5 @@
   <% end %>
   <hr>
 <% end %>
+
+<p><b><a class="link" href="/vets/new">New Vet</a></b></p>

@@ -5,7 +5,7 @@ require_relative('../models/pet.rb')
 also_reload('../models/*')
 
 get '/owners' do
-  @owners = Owner.all
+  @owners = Owner.all.sort { |a, b| a.name <=> b.name}
   erb(:'/owners/index')
 end
 

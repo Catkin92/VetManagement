@@ -1,3 +1,9 @@
+body {
+  background-image: url("/hi.gif");
+  background-repeat: no-repeat;
+  background-position: right top;
+}
+
 tbody {
   border: 5px solid #7FD8BE;
 }
@@ -21,17 +27,13 @@ hr {
   color: #7FD8BE;
 }
 
-#register-pet, #edit-pet, #register-owner, #edit-owner, #delete-owner, #delete-pet, #add-note, #edit-note, #delete-note {
+.link {
   border-width: : 1px;
   border-style: solid;
   border-color: #7FD8BE;
   border-radius: 5px;
   padding: 5px;
   margin-right: 10px;
-}
-
-#edit-note {
-  text-align: end;
 }
 
 a:hover {

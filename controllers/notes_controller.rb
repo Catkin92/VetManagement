@@ -20,7 +20,7 @@ get '/notes/edit/:id' do
   erb(:'/notes/edit')
 end
 
-post '/notes/note/:id' do
+post '/notes/edit/:id' do
   @note = Note.new(params)
   @note.update
   @pet_id = @note.pet_id

@@ -7,7 +7,7 @@ require_relative('../models/note.rb')
 also_reload('../models/*')
 
 get '/pets' do
-  @pets = Pet.all
+  @pets = Pet.all.sort { |a, b| a.name <=> b.name}
   erb(:'/pets/index')
 end
 
@@ -27,7 +27,8 @@ get '/pets/:id' do
   @pet = Pet.find(params[:id])
   id = @pet.owner_id
   @owner = Owner.find(id)
-  @notes = Note.find_by_pet(params[:id])
+  notes = Note.find_by_pet(params[:id])
+  @notes = notes.sort { |a, b| b.note_date <=> a.note_date }
   erb(:'/pets/show')
 end
 
