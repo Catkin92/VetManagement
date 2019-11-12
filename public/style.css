@@ -49,7 +49,7 @@ ul {
   justify-content: flex-start;
 }
 
-#owner-new, #owner-edit, #owner-delete, #pet-new, #note-new, #pet-edit, #pet-delete, #note-edit, #note-delete, #vet-new, #vet-edit, #vet-delete {
+#owner-new, #owner-edit, #owner-delete, #pet-new, #note-new, #pet-edit, #pet-delete, #note-edit, #note-delete, #vet-new, #vet-edit, #vet-delete, #appointment-new, #appointment-delete, #appointment-edit {
   border-width: : 1px;
   border-style: solid;
   border-color: #7FD8BE;

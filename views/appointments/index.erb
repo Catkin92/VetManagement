@@ -1,11 +1,14 @@
 <h1>Appointments:</h1>
+<a id="appointment-new" href="/appointments/new">Create a New Appointment</a>
 
 <% for appointment in @appointments %>
   <h3><b><%= appointment.pet.name %></b></h3>
-  <p><b>Date: </b><%= appointment.date %>    
+  <p><b>Date: </b><%= appointment.date %>
   <b>Time: </b><%= appointment.start_time.chomp(':00') %> -
   <%= appointment.end_time.chomp(':00') %></p>
   <p><b>Vet: </b><%= appointment.vet.name %></p>
   <p><b>Details: </b><%= appointment.details %></p>
+  <a id="appointment-edit" href="/appointments/edit/<%= appointment.id %>">Edit</a>
+  <a id="appointment-delete" href="/appointments/delete/<%= appointment.id %>">Delete</a>
   <hr>
 <% end %>

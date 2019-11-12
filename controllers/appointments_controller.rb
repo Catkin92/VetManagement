@@ -21,3 +21,22 @@ post '/appointments' do
   app.save
   redirect to '/appointments'
 end
+
+get '/appointments/delete/:id' do
+  app = Appointment.find(params[:id])
+  app.delete
+  redirect to '/appointments'
+end
+
+get '/appointments/edit/:id' do
+  @appointment = Appointment.find(params[:id])
+  @pets = Pet.all.sort { |a, b| a.name <=> b.name }
+  @vets = Vet.all.sort { |a, b| a.name <=> b.name }
+  erb(:'/appointments/edit')
+end
+
+post '/appointments/:id' do
+  app = Appointment.new(params)
+  app.update
+  redirect to '/appointments'
+end

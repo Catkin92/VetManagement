@@ -1,0 +1,42 @@
+<h3>Edit Appointment</h3>
+<form action="/appointments/<%=@appointment.id%>" method="post">
+  <label for="pet-selection">Pet:</label>
+  <select name="pet_id">
+    <% for pet in @pets %>
+    <% if pet.id == @appointment.pet_id %>
+    <option value="<%= pet.id %>" selected><%= pet.name %></option>
+    <% else %>
+    <option value="<%= pet.id %>"><%= pet.name %></option>
+    <% end %>
+    <% end %>
+  </select>
+  <br>
+  <br>
+ <label for="vet-selection">Vet:</label>
+ <select name="vet_id">
+    <% for vet in @vets %>
+    <% if vet.id == @appointment.vet_id %>
+    <option value="<%= vet.id %>"><%= vet.name %></option>
+    <option value="<%= vet.id %>" selected><%= vet.name %></option>
+    <% end %>
+    <% end %>
+  </select>
+  <br>
+  <br>
+  <label for="date-selection">Date:</label>
+  <input type="date" name="date" value="<%= @appointment.date %>">
+  <br>
+  <br>
+  <label for="start-time-selection">Start Time:</label>
+  <input type="time" name="start_time" value="<%= @appointment.start_time %>">
+  <label for="end-time-selection">End Time:</label>
+  <input type="time" name="end_time" value="<%= @appointment.end_time %>">
+  <br>
+  <br>
+  <label for="detail-field">Appointment Details:</label>
+  <br>
+  <textarea name="details" rows="8" cols="80"><%= @appointment.details %></textarea>
+  <br>
+  <br>
+  <input type="submit" value="Create Appointment">
+</form>
