@@ -66,4 +66,25 @@ class Appointment
     found = SqlRunner.run(sql, [id]).first
     return Appointment.new(found)
   end
+
+  def self.find_by_vet(id)
+    sql = "SELECT * FROM appointments
+    WHERE vet_id = $1"
+    found = SqlRunner.run(sql, [id]).first
+    return Appointment.new(found)
+  end
+
+  def self.find_by_pet(id)
+    sql = "SELECT * FROM appointments
+    WHERE pet_id = $1"
+    found = SqlRunner.run(sql, [id]).first
+    return Appointment.new(found)
+  end
+
+  def self.find_by_date(date)
+    sql = "SELECT * FROM appointments
+    WHERE date = $1"
+    found = SqlRunner.run(sql, [date]).first
+    return Appointment.new(found)
+  end
 end
