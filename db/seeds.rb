@@ -67,7 +67,7 @@ pet4.save
     'note' => 'Patch is presenting with mild alopecia.')
   note2 = Note.new(
     'pet_id' => pet1.id,
-    'note' => 'Patch has some bald patches.')
+    'note' => 'Patch is looking a bit patch-y.')
   note3 = Note.new(
     'pet_id' => pet4.id,
     'note' => 'Roscoe seems to be getting more aggressive.')

@@ -75,10 +75,10 @@ class Appointment
   end
 
   def current_date
-    sql = "SELECT DATE_PART('day', date - CURRENT_DATE) FROM appointments WHERE id = $1"
+    sql = "SELECT DATE_PART('day', date -  CURRENT_DATE) FROM appointments WHERE id = $1"
     values = [@id]
     current_date = SqlRunner.run(sql, values).first
-    
+    return current_date
   end
 
   def self.all
