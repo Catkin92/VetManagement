@@ -16,9 +16,19 @@ get '/appointments/new' do
   erb(:'/appointments/new')
 end
 
+get '/appointments/new/error' do
+  @pets = Pet.all.sort { |a, b| a.name <=> b.name }
+  @vets = Vet.all.sort { |a, b| a.name <=> b.name }
+  erb(:'/appointments/error_new')
+end
+
 post '/appointments' do
   app = Appointment.new(params)
   app.save
+  if app.time <= 0
+  app.delete
+  redirect to '/appointments/new/error'
+  end
   redirect to '/appointments'
 end
 

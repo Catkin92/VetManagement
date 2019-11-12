@@ -67,6 +67,20 @@ class Appointment
     return Vet.new(vet)
   end
 
+  def time
+    sql = "SELECT DATE_PART('minute', end_time - start_time) FROM appointments WHERE id = $1"
+    values = [@id]
+    time =  SqlRunner.run(sql, values).first
+    return time['date_part'].to_i
+  end
+
+  def current_date
+    sql = "SELECT DATE_PART('day', date - CURRENT_DATE) FROM appointments WHERE id = $1"
+    values = [@id]
+    current_date = SqlRunner.run(sql, values).first
+    
+  end
+
   def self.all
     sql = "SELECT * FROM appointments"
     appointments = SqlRunner.run(sql)

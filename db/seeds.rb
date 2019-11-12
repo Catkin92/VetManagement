@@ -95,6 +95,6 @@ note3.save
 appointment1.save
 appointment2.save
 
-# binding.pry
-#
-# nil
+binding.pry
+
+nil

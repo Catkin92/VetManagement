@@ -17,6 +17,11 @@ p, h1, h3, a, form, option {
   font-family: 'Raleway', sans-serif;
 }
 
+h4 {
+  font-family: 'Raleway', sans-serif;
+  color: red;
+}
+
 hr {
   border: 1px solid #7FD8BE;
 }
