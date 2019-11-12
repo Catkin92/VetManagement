@@ -32,4 +32,20 @@ class Appointment
     save = SqlRunner.run(sql, values).first
     @id = save['id']
   end
+
+  def update
+    sql = "UPDATE appointments SET(
+    pet_id,
+    vet_id,
+    date,
+    start_time,
+    end_time,
+    details
+    ) = (
+    $1, $2, $3, $4, $5, $6)
+    WHERE id = $7"
+    values = [@pet_id, @vet_id, @date, @start_time, @end_time, @details, @id]
+    SqlRunner.run(sql, values)
+  end
+
 end
