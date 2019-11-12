@@ -52,4 +52,18 @@ class Appointment
     sql = "DELETE FROM appointments WHERE id = $1"
     SqlRunner.run(sql, [@id])
   end
+
+  def self.all
+    sql = "SELECT * FROM appointments"
+    appointments = SqlRunner.run(sql)
+    all = appointments.map { |app| Appointment.new(app) }
+    return all
+  end
+
+  def self.find(id)
+    sql = "SELECT * FROM appointments
+    WHERE id = $1"
+    found = SqlRunner.run(sql, [id]).first
+    return Appointment.new(found)
+  end
 end

@@ -84,8 +84,16 @@ note3.save
     'end_time' => '10:30 AM',
     'details' => 'Weigh, bath, general check-up.'
   )
-
+  appointment2 = Appointment.new(
+    'pet_id' => pet3.id,
+    'vet_id' => vet1.id,
+    'date' => '2019-12-15',
+    'start_time' => '11:30 AM',
+    'end_time' => '12:00 AM',
+    'details' => 'Neuter.'
+  )
 appointment1.save
+appointment2.save
 
 binding.pry
 
