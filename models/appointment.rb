@@ -54,10 +54,17 @@ class Appointment
   end
 
   def pet
-    sql = "SELECT * FROM pets INNER JOIN appointments ON pets.id = pet_id
-    WHERE pet_id = $1"
+    sql = "SELECT * FROM pets
+    WHERE id = $1"
     pet = SqlRunner.run(sql, [@pet_id]).first
     return Pet.new(pet)
+  end
+
+  def vet
+    sql = "SELECT * FROM vets
+    WHERE id = $1"
+    vet = SqlRunner.run(sql, [@vet_id]).first
+    return Vet.new(vet)
   end
 
   def self.all
