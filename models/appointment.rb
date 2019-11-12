@@ -48,4 +48,8 @@ class Appointment
     SqlRunner.run(sql, values)
   end
 
+  def delete
+    sql = "DELETE FROM appointments WHERE id = $1"
+    SqlRunner.run(sql, [@id])
+  end
 end
