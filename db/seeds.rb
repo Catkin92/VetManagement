@@ -3,6 +3,7 @@ require_relative('../models/owner.rb')
 require_relative('../models/vet.rb')
 require_relative('../models/pet.rb')
 require_relative('../models/note.rb')
+require_relative('../models/appointment.rb')
 
 owner1 = Owner.new(
   'name' => 'Cruella De Vil',
@@ -75,6 +76,17 @@ note1.save
 note2.save
 note3.save
 
-# binding.pry
-#
-# nil
+  appointment1 = Appointment.new(
+    'pet_id' => pet1.id,
+    'vet_id' => vet2.id,
+    'date' => '2019-12-13',
+    'start_time' => '10:00 AM',
+    'end_time' => '10:30 AM',
+    'details' => 'Weigh, bath, general check-up.'
+  )
+
+appointment1.save
+
+binding.pry
+
+nil

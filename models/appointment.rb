@@ -9,12 +9,27 @@ class Appointment
 
   def initialize(options)
     @id = options['id'].to_i if options['id']
-    @pet_id = options['id'].to_i
-    @vet_id = options['id'].to_i
+    @pet_id = options['pet_id'].to_i
+    @vet_id = options['vet_id'].to_i
     @date = options['date']
     @start_time = options['start_time']
     @end_time = options['end_time']
     @details = options['details']
   end
 
+  def save
+    sql = "INSERT INTO appointments(
+    pet_id,
+    vet_id,
+    date,
+    start_time,
+    end_time,
+    details
+    ) VALUES (
+    $1, $2, $3, $4, $5, $6)
+    RETURNING *"
+    values = [@pet_id, @vet_id, @date, @start_time, @end_time, @details]
+    save = SqlRunner.run(sql, values).first
+    @id = save['id']
+  end
 end
