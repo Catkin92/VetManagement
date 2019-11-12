@@ -1,0 +1,10 @@
+<h1>Appointments:</h1>
+
+<% for appointment in @appointments %>
+  <p><%= appointment.pet %></p>
+  <p><b>Date: </b><%= appointment.date %></p>
+  <p><b>Time: </b><%= appointment.start_time.chomp(':00') %> -
+  <%= appointment.end_time.chomp(':00') %></p>
+  <p><b>Details: </b><%= appointment.details %></p>
+  <hr>
+<% end %>

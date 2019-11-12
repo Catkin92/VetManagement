@@ -89,7 +89,7 @@ note3.save
     'vet_id' => vet1.id,
     'date' => '2019-12-15',
     'start_time' => '11:30 AM',
-    'end_time' => '12:00 AM',
+    'end_time' => '12:00 PM',
     'details' => 'Neuter.'
   )
 appointment1.save

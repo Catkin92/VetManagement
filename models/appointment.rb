@@ -53,6 +53,13 @@ class Appointment
     SqlRunner.run(sql, [@id])
   end
 
+  def pet
+    sql = "SELECT * FROM pets INNER JOIN appointments ON pets.id = pet_id
+    WHERE pet_id = $1"
+    pet = SqlRunner.run(sql, [@pet_id]).first
+    return Pet.new(pet)
+  end
+
   def self.all
     sql = "SELECT * FROM appointments"
     appointments = SqlRunner.run(sql)
