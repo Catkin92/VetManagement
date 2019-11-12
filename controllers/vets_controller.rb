@@ -17,3 +17,20 @@ post '/vets' do
   Vet.new(params).save
   redirect to '/vets'
 end
+
+get '/vets/edit/:id' do
+  @vet = Vet.find(params[:id])
+  erb(:'/vets/edit')
+end
+
+post '/vets/:id' do
+  @vet = Vet.new(params)
+  @vet.update
+  redirect to '/vets'
+end
+
+get '/vets/delete/:id' do
+  @vet = Vet.find(params[:id])
+  @vet.delete
+  redirect to '/vets'
+end

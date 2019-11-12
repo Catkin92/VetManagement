@@ -4,6 +4,8 @@
   <% for pet in vet.pets %>
   <p><a href = "/pets/<%= pet.id %>"><%= pet.name %> </a></p>
   <% end %>
+  <b><a class="link" href="/vets/edit/<%= vet.id %>">Edit Vet</b></a>
+  <b><a class="link" href="/vets/delete/<%= vet.id %>">Delete Vet</b></a>
   <hr>
 <% end %>
 
