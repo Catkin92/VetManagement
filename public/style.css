@@ -27,14 +27,6 @@ hr {
   color: #7FD8BE;
 }
 
-.link {
-  border-width: : 1px;
-  border-style: solid;
-  border-color: #7FD8BE;
-  border-radius: 5px;
-  padding: 5px;
-  margin-right: 10px;
-}
 
 a:hover {
   color: #7FD8BE;
@@ -55,4 +47,13 @@ ul {
   padding-top: 8px;
   display: flex;
   justify-content: flex-start;
+}
+
+#owner-new, #owner-edit, #owner-delete, #pet-new, #note-new, #pet-edit, #pet-delete, #note-edit, #note-delete, #vet-new, #vet-edit, #vet-delete {
+  border-width: : 1px;
+  border-style: solid;
+  border-color: #7FD8BE;
+  border-radius: 5px;
+  padding: 5px;
+  margin-right: 10px;
 }

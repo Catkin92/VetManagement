@@ -1,6 +1,6 @@
 <h1>Pets</h1>
 
-<a class="link" href="/pets/new">Register a New Pet</a>
+<a id="pet-new" href="/pets/new">Register a New Pet</a>
 
 <% for pet in @pets %>
   <h3><a href="/pets/<%= pet.id %>"><%= pet.name.capitalize %></a></h3>

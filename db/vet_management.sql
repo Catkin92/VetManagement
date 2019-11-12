@@ -1,3 +1,4 @@
+DROP TABLE appointments;
 DROP TABLE notes;
 DROP TABLE pets;
 DROP TABLE vets;
@@ -29,4 +30,14 @@ CREATE TABLE notes(
   pet_id INT4 REFERENCES pets(id),
   note_date DATE,
   note TEXT
+);
+
+CREATE TABLE appointments(
+  id SERIAL4 PRIMARY KEY,
+  pet_id INT4 REFERENCES pets(id),
+  vet_id INT4 REFERENCES vets(id),
+  date DATE,
+  start_time TIME,
+  end_time TIME,
+  details TEXT
 );
