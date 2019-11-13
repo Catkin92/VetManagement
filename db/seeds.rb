@@ -45,9 +45,9 @@ pet2 = Pet.new(
   'vet_id' => vet2.id,
   'owner_id' => owner1.id)
 pet3 = Pet.new(
-  'name' => 'Dinah',
+  'name' => 'Snowball',
   'dob' => '23/7/17',
-  'type' => 'cat',
+  'type' => 'rabbit',
   'vet_id' => vet1.id,
   'owner_id' => owner2.id)
 pet4 = Pet.new(
@@ -69,32 +69,45 @@ pet4.save
     'pet_id' => pet1.id,
     'note' => 'Patch is looking a bit patch-y.')
   note3 = Note.new(
+    'pet_id' => pet2.id,
+    'note' => 'Rolly is looking a bit roly-poly.')
+  note4 = Note.new(
+    'pet_id' => pet3.id,
+    'note' => 'Snowball has an ear infection.')
+  note5 = Note.new(
     'pet_id' => pet4.id,
     'note' => 'Roscoe seems to be getting more aggressive.')
 
 note1.save
 note2.save
 note3.save
+note4.save
+note5.save
 
   appointment1 = Appointment.new(
     'pet_id' => pet1.id,
     'vet_id' => vet2.id,
-    'date' => '2019-12-13',
+    'date' => '2019-11-14',
     'start_time' => '10:00 AM',
     'end_time' => '10:30 AM',
-    'details' => 'Weigh, bath, general check-up.'
+    'details' => 'Shampoo.'
   )
   appointment2 = Appointment.new(
     'pet_id' => pet3.id,
     'vet_id' => vet1.id,
-    'date' => '2019-12-15',
+    'date' => '2019-11-15',
     'start_time' => '11:30 AM',
     'end_time' => '12:00 PM',
-    'details' => 'Neuter.'
+    'details' => 'Look at ear, give drops.'
+  )
+  appointment3 = Appointment.new(
+    'pet_id' => pet2.id,
+    'vet_id' => vet2.id,
+    'date' => '2019-11-19',
+    'start_time' => '09:00 AM',
+    'end_time' => '09:30 PM',
+    'details' => 'Weigh, put on diet.'
   )
 appointment1.save
 appointment2.save
-
-binding.pry
-
-nil
+appointment3.save
