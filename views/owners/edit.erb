@@ -3,17 +3,23 @@
 <form action="/owners/<%= @owner.id %>" method="post">
   <label for="name-field">Name:</label>
     <input type="text" name="name" value="<%= @owner.name %>">
+
   <br>
   <br>
+
   <label for="address-field">Address:</label>
   <br>
   <textarea name="address" rows="8" cols="30"><%= @owner.address %></textarea>
+
   <br>
   <br>
+
   <label for="phone-number-field">Phone Number:</label>
     <input type="tel" name="phone_number" value="<%= @owner.phone_number %>"
     minlength="10" maxlength="13" size="13">
+
   <br>
   <br>
+
   <input type="submit" value="Update">
 </form>

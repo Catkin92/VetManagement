@@ -1,5 +1,6 @@
 <h1>Edit Appointment</h1>
 <form action="/appointments/<%=@appointment.id%>" method="post">
+
   <label for="pet-selection">Pet:</label>
   <select name="pet_id">
     <% for pet in @pets %>
@@ -10,8 +11,10 @@
     <% end %>
     <% end %>
   </select>
+
   <br>
   <br>
+
  <label for="vet-selection">Vet:</label>
  <select name="vet_id">
     <% for vet in @vets %>
@@ -21,22 +24,31 @@
     <% end %>
     <% end %>
   </select>
+
   <br>
   <br>
+
   <label for="date-selection">Date:</label>
   <input type="date" name="date" value="<%= @appointment.date %>">
+
   <br>
   <br>
+
   <label for="start-time-selection">Start Time:</label>
   <input type="time" name="start_time" value="<%= @appointment.start_time %>">
+
   <label for="end-time-selection">End Time:</label>
   <input type="time" name="end_time" value="<%= @appointment.end_time %>">
+
   <br>
   <br>
+
   <label for="detail-field">Appointment Details:</label>
   <br>
   <textarea name="details" rows="8" cols="80"><%= @appointment.details %></textarea>
+
   <br>
   <br>
+
   <input type="submit" value="Create Appointment">
 </form>

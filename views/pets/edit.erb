@@ -1,18 +1,25 @@
 <h1>Edit information for <%= @pet.name %></h1>
 
 <form action="/pets/<%= @pet.id %>" method="post">
+
   <label for = "name-field">Name:</label>
   <input type="text" name="name" value="<%= @pet.name%>">
+
 <br>
 <br>
+
   <label for="dob-field">Date of Birth:</label>
   <input type="date" name="dob" value="<%= @pet.dob %>">
+
 <br>
 <br>
+
   <label for="type-field">Breed:</label>
   <input type="text" name="type" value="<%= @pet.type.capitalize %>">
+
 <br>
 <br>
+
   <label for="owner-selection">Owner:</label>
   <select name="owner_id">
     <% @owners.each do |owner| %>
@@ -23,8 +30,10 @@
       <% end %>
     <% end %>
   </select>
+
 <br>
 <br>
+
  <label for="vet-selection">Vet:</label>
  <select name="vet_id">
    <% for vet in @vets %>
@@ -35,7 +44,9 @@
      <% end %>
    <% end %>
   </select>
+
 <br>
 <br>
+
   <input type="submit" value="Update">
 </form>

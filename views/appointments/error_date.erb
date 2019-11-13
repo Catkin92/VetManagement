@@ -2,37 +2,49 @@
 
 <h1>Create New Appointment</h1>
 <form action="/appointments" method="post">
+
   <label for="pet-selection">Pet:</label>
   <select name="pet_id">
     <% for pet in @pets %>
     <option value="<%= pet.id %>"><%= pet.name %></option>
     <% end %>
   </select>
+
   <br>
   <br>
+
  <label for="vet-selection">Vet:</label>
  <select name="vet_id">
     <% for vet in @vets %>
     <option value="<%= vet.id %>"><%= vet.name %></option>
     <% end %>
   </select>
+
   <br>
   <br>
+
   <label for="date-selection">Date:</label>
   <input type="date" name="date">
+
   <br>
   <br>
+
   <label for="start-time-selection">Start Time:</label>
   <input type="time" name="start_time" step="600" min="09:00" max="18:00" required>
+
   <label for="end-time-selection">End Time:</label>
   <input type="time" name="end_time" step="600"
   min="09:00" max="18:00" required>
+
   <br>
   <br>
+
   <label for="detail-field">Appointment Details:</label>
   <br>
   <textarea name="details" rows="8" cols="80"></textarea>
+
   <br>
   <br>
+
   <input type="submit" value="Create Appointment">
 </form>
