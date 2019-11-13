@@ -48,25 +48,25 @@ input[type=submit]:hover {
 body .app-index {
   background-image: url("/hi_2.gif");
   background-repeat: no-repeat;
-  background-position: 101% -21.3%;
+  background-position: 100.9% -23.2%;
 }
 
 body .own-index {
   background-image: url("/hi_3.gif");
   background-repeat: no-repeat;
-  background-position: 101% -37%;
+  background-position: 100.9% -45.4%;
 }
 
 body .pet-index {
   background-image: url("/hi_4.gif");
   background-repeat: no-repeat;
-  background-position: 101% -20.2%;
+  background-position: 100.9% -30.9%;
 }
 
 body .vet-index {
   background-image: url("/hi_5.gif");
   background-repeat: no-repeat;
-  background-position: 101% -54.2%;
+  background-position: 100.9% -71.6%;
 }
 
 tbody {
@@ -112,8 +112,8 @@ li {
 
 ul {
   background-color: #4A4A48;
-  padding: 30px;
-  padding-top: 20px;
+  padding: 20px;
+  padding-top: 15px;
   display: flex;
   justify-content: flex-start;
 }
