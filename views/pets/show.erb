@@ -4,13 +4,12 @@
 <p><b>Owner:</b><a href="/owners/<%= @pet.owner_id %>"> <%= @owner.name %> </a>
   <br>
   <br>
-<h3>Notes:</h3>
-<p><a id="note-new" href="/notes/<%= @pet.id %>/new">Add New Note</a></p>
+<h3>Notes &nbsp&nbsp <a href="/notes/<%= @pet.id %>/new"><i class="fas fa-plus"></i></a><h3>
   <% for note in @notes %>
     <p> <b><span style="color:#7FD8BE"><%= note.note_date %></span></b>
      <%= note.note %>
-    <a id="note-edit" href="/notes/edit/<%= note.id %>"><i class="fas fa-edit"></i></a>
-    <a id="note-delete" href="/notes/delete/<%= note.id %>"><i class="fas fa-trash-alt"></i></a></p>
+    &nbsp&nbsp<a id="note-edit" href="/notes/edit/<%= note.id %>"><i class="fas fa-edit"></i></a>
+    &nbsp&nbsp<a id="note-delete" href="/notes/delete/<%= note.id %>"><i class="fas fa-trash-alt"></i></a></p>
      <hr>
   <% end %>
 <br>
