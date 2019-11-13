@@ -37,33 +37,36 @@ input[type=submit] {
   color: #4A4A48;
 }
 
-/* body {
-  background-image: url("/hi.gif");
-  background-repeat: no-repeat;
-  background-position: right top;
-} */
+input[type=submit]:hover {
+  color: #7FD8BE;
+}
+
+.home-index {
+  width: 40%
+}
+
 body .app-index {
   background-image: url("/hi_2.gif");
   background-repeat: no-repeat;
-  background-position: 101% -22.3%;
+  background-position: 101% -21.3%;
 }
 
 body .own-index {
   background-image: url("/hi_3.gif");
   background-repeat: no-repeat;
-  background-position: 101% -38%;
+  background-position: 101% -37%;
 }
 
 body .pet-index {
   background-image: url("/hi_4.gif");
   background-repeat: no-repeat;
-  background-position: 101% -21.2%;
+  background-position: 101% -20.2%;
 }
 
 body .vet-index {
   background-image: url("/hi_5.gif");
   background-repeat: no-repeat;
-  background-position: 101% -55.2%;
+  background-position: 101% -54.2%;
 }
 
 tbody {
@@ -85,7 +88,7 @@ h4 {
 }
 
 hr {
-  border: 1px solid #7FD8BE;
+  border: 2px solid #7FD8BE;
 }
 #home_button, #pets_button, #vets_button, #owners_button {
   padding-left: 10px;
@@ -104,18 +107,18 @@ li a {
 
 li {
   display: inline-block;
-  font-size: 20px;
+  font-size: 25px;
 }
 
 ul {
   background-color: #4A4A48;
-  padding: 15px;
-  padding-top: 8px;
+  padding: 30px;
+  padding-top: 20px;
   display: flex;
   justify-content: flex-start;
 }
 
-#owner-new, #owner-edit, #owner-delete, #pet-new, #note-new, #pet-edit, #pet-delete, #note-edit, #note-delete, #vet-new, #vet-edit, #vet-delete, #appointment-new, #appointment-delete, #appointment-edit {
+#owner-new, #owner-edit, #owner-delete, #note-new, #pet-new, #pet-edit, #pet-delete, #vet-new, #vet-edit, #vet-delete, #appointment-new, #appointment-delete, #appointment-edit {
   border-width: : 1px;
   border-style: solid;
   border-color: #7FD8BE;

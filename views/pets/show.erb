@@ -5,14 +5,14 @@
   <br>
   <br>
 <h3>Notes:</h3>
-<p><b><a id="note-new" href="/notes/<%= @pet.id %>/new">Add New Note</a></b></p>
+<p><a id="note-new" href="/notes/<%= @pet.id %>/new">Add New Note</a></p>
   <% for note in @notes %>
-    <p> <span style="color:grey"><%= note.note_date %></span>
+    <p> <b><span style="color:#7FD8BE"><%= note.note_date %></span></b>
      <%= note.note %>
-    <b><a id="note-edit" href="/notes/edit/<%= note.id %>">Edit Note</a></b>
-    <b><a id="note-delete" href="/notes/delete/<%= note.id %>">Delete Note</a></b></p>
+    <a id="note-edit" href="/notes/edit/<%= note.id %>"><i class="fas fa-edit"></i></a>
+    <a id="note-delete" href="/notes/delete/<%= note.id %>"><i class="fas fa-trash-alt"></i></a></p>
      <hr>
   <% end %>
 <br>
 <br>
-<p><b><a id="pet-edit" href="/pets/<%= @pet.id %>/edit">Edit Information</a><a id="pet-delete" href="/pets/delete/<%= @pet.id %>">Delete Pet</a></b></p>
+<p><a id="pet-edit" href="/pets/<%= @pet.id %>/edit">Edit Information</a><a id="pet-delete" href="/pets/delete/<%= @pet.id %>">Delete Pet</a></p>

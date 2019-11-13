@@ -1,6 +1,6 @@
 <div class="vet-index">
 <h1>Vets</h1>
-<p><b><a id="vet-new" href="/vets/new">Register a New Vet</a></b></p>
+<p><a id="vet-new" href="/vets/new">Register a New Vet</a></p>
 <% for vet in @vets %>
   <h3><%= vet.name %></h3>
 
@@ -8,8 +8,8 @@
     <p><a href = "/pets/<%= pet.id %>"><%= pet.name %> </a></p>
     <% end %>
 
-  <b><a id="vet-edit" href="/vets/edit/<%= vet.id %>">Edit Vet</b></a>
-  <b><a id="vet-delete" href="/vets/delete/<%= vet.id %>">Delete Vet</b></a>
+  <a id="vet-edit" href="/vets/edit/<%= vet.id %>">Edit Vet</a>
+  <a id="vet-delete" href="/vets/delete/<%= vet.id %>">Delete Vet</a>
   <br>
   <br>
   <hr>
