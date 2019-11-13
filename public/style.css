@@ -37,10 +37,33 @@ input[type=submit] {
   color: #4A4A48;
 }
 
-body {
+/* body {
   background-image: url("/hi.gif");
   background-repeat: no-repeat;
   background-position: right top;
+} */
+body .app-index {
+  background-image: url("/hi_2.gif");
+  background-repeat: no-repeat;
+  background-position: 101% -22.3%;
+}
+
+body .own-index {
+  background-image: url("/hi_3.gif");
+  background-repeat: no-repeat;
+  background-position: 101% -38%;
+}
+
+body .pet-index {
+  background-image: url("/hi_4.gif");
+  background-repeat: no-repeat;
+  background-position: 101% -21.2%;
+}
+
+body .vet-index {
+  background-image: url("/hi_5.gif");
+  background-repeat: no-repeat;
+  background-position: 101% -55.2%;
 }
 
 tbody {
