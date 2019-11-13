@@ -34,25 +34,25 @@ vet2.save
 
 pet1 = Pet.new(
   'name' => 'Patch',
-  'dob' => '12/10/19',
+  'dob' => '2019-10-12',
   'type' => 'dalmatian',
   'vet_id' => vet2.id,
   'owner_id' => owner1.id)
 pet2 = Pet.new(
   'name' => 'Rolly',
-  'dob' => '12/10/19',
+  'dob' => '2019-10-12',
   'type' => 'dalmatian',
   'vet_id' => vet2.id,
   'owner_id' => owner1.id)
 pet3 = Pet.new(
   'name' => 'Snowball',
-  'dob' => '23/7/17',
+  'dob' => '2017-07-13',
   'type' => 'rabbit',
   'vet_id' => vet1.id,
   'owner_id' => owner2.id)
 pet4 = Pet.new(
   'name' => 'Roscoe',
-  'dob' => '4/2/15',
+  'dob' => '2015-08-24',
   'type' => 'doberman',
   'vet_id' => vet1.id,
   'owner_id' => owner3.id)
@@ -76,7 +76,7 @@ pet4.save
     'note' => 'Snowball has an ear infection.')
   note5 = Note.new(
     'pet_id' => pet4.id,
-    'note' => 'Roscoe seems to be getting more aggressive.')
+    'note' => 'Roscoe has rabies.')
 
 note1.save
 note2.save
