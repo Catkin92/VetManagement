@@ -1,9 +1,11 @@
 <h1>Vets</h1>
 <% for vet in @vets %>
   <h3><%= vet.name %></h3>
-  <% for pet in vet.pets %>
-  <p><a href = "/pets/<%= pet.id %>"><%= pet.name %> </a></p>
-  <% end %>
+
+    <% for pet in vet.pets %>
+    <p><a href = "/pets/<%= pet.id %>"><%= pet.name %> </a></p>
+    <% end %>
+
   <b><a id="vet-edit" href="/vets/edit/<%= vet.id %>">Edit Vet</b></a>
   <b><a id="vet-delete" href="/vets/delete/<%= vet.id %>">Delete Vet</b></a>
   <br>

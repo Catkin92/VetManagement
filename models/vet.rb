@@ -54,7 +54,7 @@ class Vet
     sql = "SELECT * FROM vets
     WHERE id = $1"
     vet = SqlRunner.run(sql, [id]).first
-    return vet
+    return Vet.new(vet)
   end
 
 end

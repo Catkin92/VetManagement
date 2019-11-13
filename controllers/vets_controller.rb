@@ -2,6 +2,7 @@ require('sinatra')
 require('sinatra/contrib/all')
 require_relative('../models/pet.rb')
 require_relative('../models/vet.rb')
+require_relative('../models/appointment.rb')
 also_reload('../models/*')
 
 get '/vets' do

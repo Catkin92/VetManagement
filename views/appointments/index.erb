@@ -2,7 +2,7 @@
 <a id="appointment-new" href="/appointments/new">Create a New Appointment</a>
 
 <% for appointment in @appointments %>
-  <h3><b><%= appointment.pet.name %></b></h3>
+  <h3><b><a href="/pets/<%= appointment.pet.id %>"><%= appointment.pet.name %></a></b></h3>
 
   <p><b>Date: </b><%= appointment.date %>
 
@@ -14,7 +14,7 @@
   <p><b>Details: </b><%= appointment.details %></p>
 
   <a id="appointment-edit" href="/appointments/edit/<%= appointment.id %>">Edit</a>
-  
+
   <a id="appointment-delete" href="/appointments/delete/<%= appointment.id %>">Delete</a>
   <br>
   <br>

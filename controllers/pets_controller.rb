@@ -4,6 +4,7 @@ require_relative('../models/pet.rb')
 require_relative('../models/vet.rb')
 require_relative('../models/owner.rb')
 require_relative('../models/note.rb')
+require_relative('../models/appointment.rb')
 also_reload('../models/*')
 
 get '/pets' do

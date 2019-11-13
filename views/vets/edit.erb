@@ -1,7 +1,7 @@
 <h1>Edit Vet Information</h1>
 <form action="/vets/<%= @vet.id %>" method="post">
   <label for="name-label">Name:</label>
-  <input type="text" name="name" value=<%= @vet.name %>>
+  <input type="text" name="name" value="<%= @vet.name %>">
 
   <input type="submit" value="Update">
 </form>
