@@ -77,4 +77,11 @@ class Pet
     return Pet.new(pet)
   end
 
+  def self.order
+    sql = "SELECT * FROM pets
+    ORDER BY name"
+    pets = SqlRunner.run(sql)
+    return pets.map { |pet| Pet.new(pet) }
+  end
+
 end

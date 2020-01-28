@@ -56,11 +56,18 @@ pet4 = Pet.new(
   'type' => 'doberman',
   'vet_id' => vet1.id,
   'owner_id' => owner3.id)
+pet5 = Pet.new(
+  'name' => 'Betsy',
+  'dob' => '2017-12-11',
+  'type' => 'cow',
+  'vet_id' => vet2.id,
+  'owner_id' => owner2.id)
 
 pet1.save
 pet2.save
 pet3.save
 pet4.save
+pet5.save
 
   note1 = Note.new(
     'pet_id' => pet1.id,
@@ -111,3 +118,7 @@ note5.save
 appointment1.save
 appointment2.save
 appointment3.save
+
+binding.pry
+
+nil
