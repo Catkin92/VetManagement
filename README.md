@@ -3,7 +3,7 @@ This is the first project I made in CodeClan, five weeks into the course, design
 
 ![Screenshot of appointment page](public/vetAppointment.png)
 
-## Project Brief
+# Project Brief
 
 ### Vet Management App
 
@@ -20,3 +20,24 @@ A veterinary practice has approached you to build a web application to help them
 - Be able to assign animals to vets
 - CRUD actions for vets / animals - remember the user - what would they want to see on each View? What Views should there be?
 
+# Project Set Up
+
+Create the database
+```
+createdb vet_db
+```
+
+Create the database tables
+```
+psql -d vet_db -f db/vet_management.sql
+```
+
+Populate the database
+```
+ruby db/seeds.db
+```
+
+Run the app
+```
+ruby app.db
+```
